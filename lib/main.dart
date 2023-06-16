@@ -1,3 +1,4 @@
+import 'package:fitness360/app/app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,11 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Fitness 360',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Placeholder(),
+      home: const App(),
     );
   }
 }
