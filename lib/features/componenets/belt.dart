@@ -19,7 +19,6 @@ class Belt extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Common.gap(height: 20),
           Text(
             'Collaboration with',
             style: AppTypography.baseStyle(
