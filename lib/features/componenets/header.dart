@@ -5,8 +5,8 @@ import 'package:fitness360/constants/common_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-///Creates a widget that builds the header and its content.
 class Header extends StatelessWidget {
+  ///Creates a widget that builds the header and its content.
   const Header({super.key});
 
   @override

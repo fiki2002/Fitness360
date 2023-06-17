@@ -8,11 +8,13 @@ class FitnessPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: const [
-          Header(),
-          HeroSection(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: const [
+            Header(),
+            HeroSection(),
+          ],
+        ),
       ),
     );
   }
