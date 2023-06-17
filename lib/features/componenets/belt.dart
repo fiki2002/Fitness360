@@ -1,7 +1,9 @@
 import 'package:fitness360/constants/app_palette.dart';
+import 'package:fitness360/constants/app_string.dart';
 import 'package:fitness360/constants/app_typography.dart';
 import 'package:fitness360/constants/common_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Belt extends StatelessWidget {
   const Belt({super.key});
@@ -15,6 +17,7 @@ class Belt extends StatelessWidget {
       width: data.width,
       color: Pallette.containerBgColor,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Common.gap(height: 20),
           Text(
@@ -25,6 +28,17 @@ class Belt extends StatelessWidget {
               fontSize: 24,
             ),
           ),
+          Common.gap(height: 40),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SvgPicture.asset(AppStrings.addidasIcon),
+              SvgPicture.asset(AppStrings.nikeIcon),
+              SvgPicture.asset(AppStrings.newBalance),
+              SvgPicture.asset(AppStrings.reebokIcon),
+              SvgPicture.asset(AppStrings.otherDesigner),
+            ],
+          )
         ],
       ),
     );

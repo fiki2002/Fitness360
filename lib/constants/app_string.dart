@@ -5,7 +5,11 @@ class AppStrings {
   static const String male = 'assets/images/male.png';
   static const String maleFemale = 'assets/images/male_female.png';
   static const String female = 'assets/images/female.png';
-  static const String addidasIcon = 'assets/images/female.png';
+  static const String addidasIcon = 'assets/icons/addidas.svg';
+  static const String nikeIcon = 'assets/icons/nike.svg';
+  static const String reebokIcon = 'assets/icons/reebok.svg';
+  static const String otherDesigner = 'assets/icons/other_designer.svg';
+  static const String newBalance = 'assets/icons/new_balance.svg';
 
   ///Texts
   static const String home = 'Home';
@@ -19,5 +23,4 @@ class AppStrings {
   static const String workers = 'Workers';
   static const String startNow = 'Start Now';
   static const String downloadApp = 'Download App';
-
 }
