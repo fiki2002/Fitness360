@@ -3,7 +3,9 @@ class AppStrings {
   ///Assets
   static const String logoIcon = 'assets/icons/logo.svg';
   static const String male = 'assets/images/male.png';
+  static const String maleFemale = 'assets/images/male_female.png';
   static const String female = 'assets/images/female.png';
+  static const String addidasIcon = 'assets/images/female.png';
 
   ///Texts
   static const String home = 'Home';
