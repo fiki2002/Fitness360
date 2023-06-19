@@ -1,6 +1,4 @@
-# fitness360
 
-A new Flutter project.
 
 ## Getting Started
 
