@@ -3,6 +3,7 @@ import 'package:fitness360/constants/app_string.dart';
 import 'package:fitness360/constants/app_typography.dart';
 import 'package:fitness360/constants/common_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class WhatOurAppOffers extends StatelessWidget {
   const WhatOurAppOffers({super.key});
@@ -29,15 +30,21 @@ class WhatOurAppOffers extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               _buildContainer(
-                child: Container(),
+                icon: AppStrings.img1,
+                text1: AppStrings.expertText,
+                text2: AppStrings.text1,
               ),
               Common.gap(width: 20),
               _buildContainer(
-                child: Container(),
+                icon: AppStrings.img2,
+                text1: AppStrings.easyProgressTracking,
+                text2: AppStrings.text2,
               ),
               Common.gap(width: 20),
               _buildContainer(
-                child: Container(),
+                icon: AppStrings.img3,
+                text1: AppStrings.communityInspireU,
+                text2: AppStrings.text3,
               ),
             ],
           ),
@@ -97,15 +104,37 @@ class WhatOurAppOffers extends StatelessWidget {
     );
   }
 
-  Widget _buildContainer({required Widget child}) {
+  Widget _buildContainer({required String icon, text1, text2}) {
     return Expanded(
       child: Container(
         height: 360,
+        padding: const EdgeInsets.only(top: 30, left: 20, bottom: 20),
         decoration: BoxDecoration(
           color: Palette.containerBgColor,
           borderRadius: BorderRadius.circular(12),
         ),
-        child: child,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SvgPicture.asset(icon),
+            Common.gap(height: 40),
+            Text(
+              text1,
+              style: AppTypography.baseStyle(
+                fontSize: 24,
+                color: Palette.white,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            Common.gap(height: 40),
+            Text(
+              text2,
+              style: AppTypography.baseStyle(
+                color: Palette.white,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

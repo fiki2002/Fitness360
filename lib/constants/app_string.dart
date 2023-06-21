@@ -22,6 +22,9 @@ class AppStrings {
   static const String instaIcon = 'assets/icons/insta.svg';
   static const String twitterIcon = 'assets/icons/twitter.svg';
   static const String copyRightIcon = 'assets/icons/copyright.svg';
+  static const String img1 = 'assets/icons/img1.svg';
+  static const String img2 = 'assets/icons/img2.svg';
+  static const String img3 = 'assets/icons/img3.svg';
 
   ///Texts
   static const String home = 'Home';
@@ -63,4 +66,10 @@ class AppStrings {
   static const String userName1 = 'Arlene McCoy';
   static const String userName2 = 'Albert Flores';
   static const String userName3 = 'Annette Black';
+  static const String expertText = 'Expert Nutrition Advice';
+  static const String easyProgressTracking = 'Easy Progress Tracking';
+  static const String communityInspireU = 'A Community to inspire you';
+  static const String text1 = 'Fuel your body with the right nutrients\nand take your fitness journey to the\nnext level.';
+  static const String text2 = 'Stay motivated and track your progress\neffortlessly with our intuitive app.\nMonitor your workout and make real strides\ntowards your fitness goals. ';
+  static const String text3 = 'We believe in the power of community\nto ignite your inner spark and propel\nyou towards your dreams.';
 }
