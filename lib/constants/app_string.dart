@@ -13,6 +13,8 @@ class AppStrings {
   static const String image1 = 'assets/images/image1.png';
   static const String image2 = 'assets/images/image2.png';
   static const String image3 = 'assets/images/image3.png';
+  static const String appleIcon = 'assets/icons/apple.svg';
+  static const String playStoreIcon = 'assets/icons/playstore.svg';
 
   ///Texts
   static const String home = 'Home';
@@ -33,4 +35,10 @@ class AppStrings {
   static const String seeTheTransformations = 'See the Transformations';
   static const String checkOutText =
       'Check out these inspiring before-and-after photos of our users who have completely\ntransformed their bodies and lives. Witness the power of commitment, dedication, and our\nfitness app\'s incredible features.';
+  static const String getStartedToday = 'Get Started Today!';
+  static const String getStartedSubText =
+      'Ready to embark on your fitness journey and experience the life-changing\nbenefits of our app? Join thousands of users who have achieved amazing\nresults. Download our app now and unlock your full potential. Get fit, get\nhealthy, and get ready to live your best life!';
+  static const String availableIn = 'Available In';
+  static const String apple = 'APPLE STORE';
+  static const String playStore = 'PLAY STORE';
 }

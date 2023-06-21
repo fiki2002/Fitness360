@@ -9,7 +9,7 @@ class AppTypography {
     final FontWeight? fontWeight,
   }) {
     return GoogleFonts.openSans(
-      color: color ?? Pallette.black,
+      color: color ?? Palette.black,
       fontSize: fontSize ?? 20,
       fontWeight: fontWeight ?? FontWeight.w400,
     );

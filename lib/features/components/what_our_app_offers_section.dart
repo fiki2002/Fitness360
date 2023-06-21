@@ -96,7 +96,7 @@ class WhatOurAppOffers extends StatelessWidget {
       child: Container(
         height: 360,
         decoration: BoxDecoration(
-          color: Pallette.containerBgColor,
+          color: Palette.containerBgColor,
           borderRadius: BorderRadius.circular(12),
         ),
         child: child,
@@ -116,7 +116,7 @@ class WhatOurAppOffers extends StatelessWidget {
       margin: EdgeInsets.only(left: isOdd ? 150 : 0),
       width: data.width * 0.4,
       decoration: BoxDecoration(
-        color: Pallette.containerBgColor,
+        color: Palette.containerBgColor,
         borderRadius: BorderRadius.circular(12),
       ),
       child: child,

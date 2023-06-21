@@ -15,14 +15,14 @@ class Belt extends StatelessWidget {
     return Container(
       height: 200,
       width: data.width,
-      color: Pallette.containerBgColor,
+      color: Palette.containerBgColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             'Collaboration with',
             style: AppTypography.baseStyle(
-              color: Pallette.white,
+              color: Palette.white,
               fontWeight: FontWeight.w700,
               fontSize: 24,
             ),

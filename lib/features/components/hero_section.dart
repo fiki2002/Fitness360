@@ -75,18 +75,18 @@ class HeroSection extends StatelessWidget {
                             AppStrings.startNow,
                             style: AppTypography.baseStyle(
                               fontWeight: FontWeight.w700,
-                              color: Pallette.white,
+                              color: Palette.white,
                             ),
                           ),
                         ),
                         Common.gap(width: 12),
                         _buildContainer(
-                          color: Pallette.white,
+                          color: Palette.white,
                           child: Text(
                             AppStrings.downloadApp,
                             style: AppTypography.baseStyle(
                               fontWeight: FontWeight.w700,
-                              color: Pallette.black,
+                              color: Palette.black,
                             ),
                           ),
                         ),
@@ -118,7 +118,7 @@ class HeroSection extends StatelessWidget {
           style: AppTypography.baseStyle(
             fontSize: 24,
             fontWeight: FontWeight.w600,
-            color: Pallette.grey,
+            color: Palette.grey,
           ),
         ),
       ],
@@ -130,9 +130,9 @@ class HeroSection extends StatelessWidget {
       height: 52,
       width: 200,
       decoration: BoxDecoration(
-        color: color ?? Pallette.containerBgColor,
+        color: color ?? Palette.containerBgColor,
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Pallette.containerBgColor),
+        border: Border.all(color: Palette.containerBgColor),
       ),
       child: Center(child: child),
     );

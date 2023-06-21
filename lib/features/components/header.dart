@@ -29,7 +29,7 @@ class Header extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
-                color: Pallette.borderColor,
+                color: Palette.borderColor,
               ),
             ),
             child: Row(
@@ -41,14 +41,14 @@ class Header extends StatelessWidget {
                     vertical: 10,
                   ),
                   decoration: BoxDecoration(
-                    color: Pallette.containerBgColor,
+                    color: Palette.containerBgColor,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Center(
                     child: Text(
                       AppStrings.home,
                       style: AppTypography.baseStyle(
-                        color: Pallette.white,
+                        color: Palette.white,
                         fontWeight: FontWeight.w700,
                       ),
                     ),

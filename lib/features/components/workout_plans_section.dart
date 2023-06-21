@@ -34,7 +34,7 @@ class WorkOutPlansSections extends StatelessWidget {
           width: 200,
           height: 52,
           decoration: BoxDecoration(
-            color: Pallette.containerBgColor,
+            color: Palette.containerBgColor,
             borderRadius: BorderRadius.circular(8),
           ),
           child: Center(
@@ -42,7 +42,7 @@ class WorkOutPlansSections extends StatelessWidget {
               'JOIN US',
               style: AppTypography.baseStyle(
                 fontWeight: FontWeight.w700,
-                color: Pallette.white,
+                color: Palette.white,
               ),
             ),
           ),
