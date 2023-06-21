@@ -1,4 +1,5 @@
 import 'package:fitness360/constants/app_palette.dart';
+import 'package:fitness360/constants/app_string.dart';
 import 'package:fitness360/constants/app_typography.dart';
 import 'package:fitness360/constants/common_widgets.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class WhatOurAppOffers extends StatelessWidget {
         children: [
           Common.gap(height: 140),
           Text(
-            'What Our App Offers',
+            AppStrings.whatOurAppOffers,
             style: AppTypography.baseStyle(
               fontSize: 40,
               fontWeight: FontWeight.w700,
@@ -48,7 +49,7 @@ class WhatOurAppOffers extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Know What\nOur Users Are Saying',
+                    AppStrings.whatUsersAreSaying,
                     textAlign: TextAlign.start,
                     style: AppTypography.baseStyle(
                       fontWeight: FontWeight.w700,
@@ -57,7 +58,7 @@ class WhatOurAppOffers extends StatelessWidget {
                   ),
                   Common.gap(height: 20),
                   Text(
-                    'Don\'t Just Take Our Word For It - Hear What Our Users Have\nTo Say About Their Incredible Transformations:',
+                    AppStrings.incredibleSaying,
                     textAlign: TextAlign.start,
                     style: AppTypography.baseStyle(),
                   ),

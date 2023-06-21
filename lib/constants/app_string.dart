@@ -10,6 +10,9 @@ class AppStrings {
   static const String reebokIcon = 'assets/icons/reebok.svg';
   static const String otherDesigner = 'assets/icons/other_designer.svg';
   static const String newBalance = 'assets/icons/new_balance.svg';
+  static const String image1 = 'assets/images/image1.png';
+  static const String image2 = 'assets/images/image2.png';
+  static const String image3 = 'assets/images/image3.png';
 
   ///Texts
   static const String home = 'Home';
@@ -23,4 +26,11 @@ class AppStrings {
   static const String workers = 'Workers';
   static const String startNow = 'Start Now';
   static const String downloadApp = 'Download App';
+  static const String whatOurAppOffers = 'What Our App Offers';
+  static const String whatUsersAreSaying = 'Know What\nOur Users Are Saying';
+  static const String incredibleSaying =
+      'Don\'t Just Take Our Word For It - Hear What Our Users Have\nTo Say About Their Incredible Transformations:';
+  static const String seeTheTransformations = 'See the Transformations';
+  static const String checkOutText =
+      'Check out these inspiring before-and-after photos of our users who have completely\ntransformed their bodies and lives. Witness the power of commitment, dedication, and our\nfitness app\'s incredible features.';
 }
