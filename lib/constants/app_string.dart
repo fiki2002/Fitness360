@@ -13,6 +13,9 @@ class AppStrings {
   static const String image1 = 'assets/images/image1.png';
   static const String image2 = 'assets/images/image2.png';
   static const String image3 = 'assets/images/image3.png';
+  static const String person1 = 'assets/images/person1.png';
+  static const String person2 = 'assets/images/person2.png';
+  static const String person3 = 'assets/images/person3.png';
   static const String appleIcon = 'assets/icons/apple.svg';
   static const String playStoreIcon = 'assets/icons/playstore.svg';
   static const String fbIcon = 'assets/icons/facebook.svg';
@@ -55,4 +58,9 @@ class AppStrings {
       'Fitness 360 isn\'t just about building muscle or shedding\npounds; it\'s about cultivating a balanced and harmonious life';
   static const String fitness360 = '2023 Copyright by Fitness360';
   static const String termsAndPolicy = 'Terms, Privacy policy';
+  static const String userFeedback1 =
+      'I\'ve Tried Countless Fitness Apps, But This One Truly Stands Out.\nThe Personalized Workout Plans Have Pushed Me To New Limits,\nAnd The Nutrition Advice Has Helped Me Make Sustainable\nChanges. I\'ve Lost 20 Pounds And Gained So Much Strength';
+  static const String userName1 = 'Arlene McCoy';
+  static const String userName2 = 'Albert Flores';
+  static const String userName3 = 'Annette Black';
 }

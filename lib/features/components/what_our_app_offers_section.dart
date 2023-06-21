@@ -67,18 +67,24 @@ class WhatOurAppOffers extends StatelessWidget {
               Column(
                 children: [
                   _stackedContainer(
-                    child: const SizedBox(),
+                    positionedValue: 115,
+                    text: AppStrings.userName1,
+                    image: AppStrings.person1,
                     context: context,
                   ),
                   Common.gap(height: 24),
                   _stackedContainer(
+                    positionedValue: -40,
+                    text: AppStrings.userName2,
+                    image: AppStrings.person2,
                     isOdd: false,
-                    child: const SizedBox(),
                     context: context,
                   ),
                   Common.gap(height: 24),
                   _stackedContainer(
-                    child: const SizedBox(),
+                    text: AppStrings.userName3,
+                    positionedValue: 115,
+                    image: AppStrings.person3,
                     context: context,
                   ),
                 ],
@@ -105,21 +111,57 @@ class WhatOurAppOffers extends StatelessWidget {
   }
 
   Widget _stackedContainer({
-    required Widget child,
+    required String text,
     required BuildContext context,
+    required String image,
     bool isOdd = true,
+    required double positionedValue,
   }) {
     final data = MediaQuery.of(context).size;
 
-    return Container(
-      height: 160,
-      margin: EdgeInsets.only(left: isOdd ? 150 : 0),
-      width: data.width * 0.4,
-      decoration: BoxDecoration(
-        color: Palette.containerBgColor,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: child,
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+          height: 160,
+          margin: EdgeInsets.only(left: isOdd ? 150 : 0),
+          padding: const EdgeInsets.only(top: 20, left: 60),
+          width: data.width * 0.4,
+          decoration: BoxDecoration(
+            color: Palette.containerBgColor,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                AppStrings.userFeedback1,
+                style: AppTypography.baseStyle(
+                  fontSize: 14,
+                  color: Palette.white,
+                ),
+              ),
+              Common.gap(height: 16),
+              Text(
+                text,
+                style: AppTypography.baseStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Palette.white,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Positioned(
+          left: positionedValue,
+          top: 10,
+          child: CircleAvatar(
+            backgroundImage: AssetImage(image),
+            radius: 40,
+          ),
+        )
+      ],
     );
   }
 }
