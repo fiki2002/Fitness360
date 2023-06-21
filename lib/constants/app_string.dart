@@ -15,6 +15,10 @@ class AppStrings {
   static const String image3 = 'assets/images/image3.png';
   static const String appleIcon = 'assets/icons/apple.svg';
   static const String playStoreIcon = 'assets/icons/playstore.svg';
+  static const String fbIcon = 'assets/icons/facebook.svg';
+  static const String instaIcon = 'assets/icons/insta.svg';
+  static const String twitterIcon = 'assets/icons/twitter.svg';
+  static const String copyRightIcon = 'assets/icons/copyright.svg';
 
   ///Texts
   static const String home = 'Home';
@@ -41,4 +45,14 @@ class AppStrings {
   static const String availableIn = 'Available In';
   static const String apple = 'APPLE STORE';
   static const String playStore = 'PLAY STORE';
+  static const String joinOurNewsLetter = 'Join Our Newsletter';
+  static const String niceLetterOffer =
+      'We’ll send you a nice letter once per week. No spam';
+  static const String enterYourEmail = 'Enter your Email';
+  static const String subscribe = 'SUBSCRIBE';
+  static const String ourSocialMedia = 'Our social media';
+  static const String aboutUs =
+      'Fitness 360 isn\'t just about building muscle or shedding\npounds; it\'s about cultivating a balanced and harmonious life';
+  static const String fitness360 = '2023 Copyright by Fitness360';
+  static const String termsAndPolicy = 'Terms, Privacy policy';
 }
