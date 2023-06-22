@@ -18,7 +18,7 @@ class FitnessPage extends StatelessWidget {
         child: Column(
           children: const [
             Header(),
-            // HeroSection(),
+            HeroSection(),
             // Belt(),
             // WorkOutPlansSections(),
             // WhatOurAppOffers(),

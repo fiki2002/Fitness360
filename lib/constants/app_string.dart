@@ -29,8 +29,7 @@ class AppStrings {
 
   ///Texts
   static const String home = 'Home';
-  static const String getFitNow = 'Get Fit Now:';
-  static const String yourPersonalFitness = 'Your Personal Fitness App';
+  static const String getFitNow = 'Get Fit Now:\nYour Personal Fitness App';
   static const String twoHundredK = '200K+';
   static const String twoFifty = '250+';
   static const String hundredPlus = '100+';
@@ -41,6 +40,8 @@ class AppStrings {
   static const String downloadApp = 'Download App';
   static const String whatOurAppOffers = 'What Our App Offers';
   static const String whatUsersAreSaying = 'Know What\nOur Users Are Saying';
+  static const String achieveText =
+      'Achieve your fitness goals with our personalized workout plans, expert nutrition advice, and easy progress tracking. Join thousands of satisfied users who have transformed their lives!';
   static const String incredibleSaying =
       'Don\'t Just Take Our Word For It - Hear What Our Users Have\nTo Say About Their Incredible Transformations:';
   static const String seeTheTransformations = 'See the Transformations';
@@ -70,7 +71,10 @@ class AppStrings {
   static const String expertText = 'Expert Nutrition Advice';
   static const String easyProgressTracking = 'Easy Progress Tracking';
   static const String communityInspireU = 'A Community to inspire you';
-  static const String text1 = 'Fuel your body with the right nutrients\nand take your fitness journey to the\nnext level.';
-  static const String text2 = 'Stay motivated and track your progress\neffortlessly with our intuitive app.\nMonitor your workout and make real strides\ntowards your fitness goals. ';
-  static const String text3 = 'We believe in the power of community\nto ignite your inner spark and propel\nyou towards your dreams.';
+  static const String text1 =
+      'Fuel your body with the right nutrients\nand take your fitness journey to the\nnext level.';
+  static const String text2 =
+      'Stay motivated and track your progress\neffortlessly with our intuitive app.\nMonitor your workout and make real strides\ntowards your fitness goals. ';
+  static const String text3 =
+      'We believe in the power of community\nto ignite your inner spark and propel\nyou towards your dreams.';
 }

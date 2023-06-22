@@ -18,10 +18,9 @@ class Header extends StatelessWidget {
     log(data.width.toString());
     final isSmallMedium = ResponsiveWidget.isSmallScreen(context);
 
-    log(isSmallMedium.toString());
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: data.width * 0.06,
+        horizontal: isSmallMedium ? data.width * 0.04 : data.width * 0.08,
         vertical: data.height * 0.04,
       ),
       child: Row(
