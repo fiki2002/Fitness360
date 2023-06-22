@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:fitness360/constants/app_palette.dart';
+import 'package:fitness360/constants/app_responsiveness.dart';
 import 'package:fitness360/constants/app_string.dart';
 import 'package:fitness360/constants/app_typography.dart';
 import 'package:fitness360/constants/common_widgets.dart';
@@ -12,6 +15,10 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final data = MediaQuery.of(context).size;
+    log(data.width.toString());
+    final isSmallMedium = ResponsiveWidget.isSmallScreen(context);
+
+    log(isSmallMedium.toString());
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: data.width * 0.06,
@@ -19,72 +26,86 @@ class Header extends StatelessWidget {
       ),
       child: Row(
         children: [
-          SvgPicture.asset(AppStrings.logoIcon),
+          SvgPicture.asset(
+            AppStrings.logoIcon,
+            height: isSmallMedium ? 40 : 50,
+          ),
           const Spacer(),
+          isSmallMedium
+              ? SvgPicture.asset(
+                  AppStrings.menu,
+                  height: 40,
+                )
+              : _buildHeader(context),
+        ],
+      ),
+    );
+  }
+
+  _buildHeader(BuildContext context) {
+    final data = MediaQuery.of(context).size;
+
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        vertical: 12,
+        horizontal: 15,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: Palette.borderColor,
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
           Container(
             padding: const EdgeInsets.symmetric(
-              vertical: 12,
-              horizontal: 15,
+              horizontal: 27,
+              vertical: 10,
             ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: Palette.borderColor,
+              color: Palette.containerBgColor,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Center(
+              child: Text(
+                AppStrings.home,
+                style: AppTypography.baseStyle(
+                  color: Palette.white,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 27,
-                    vertical: 10,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Palette.containerBgColor,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Center(
-                    child: Text(
-                      AppStrings.home,
-                      style: AppTypography.baseStyle(
-                        color: Palette.white,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                ),
-                Common.gap(width: data.width * 0.01),
-                Text(
-                  'Service',
-                  style: AppTypography.baseStyle(
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                Common.gap(width: data.width * 0.01),
-                Text(
-                  'Pricing',
-                  style: AppTypography.baseStyle(
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                Common.gap(width: data.width * 0.01),
-                Text(
-                  'Why Us',
-                  style: AppTypography.baseStyle(
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                Common.gap(width: data.width * 0.01),
-                Text(
-                  'Our Work',
-                  style: AppTypography.baseStyle(
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ],
+          ),
+          Common.gap(width: data.width * 0.01),
+          Text(
+            'Service',
+            style: AppTypography.baseStyle(
+              fontWeight: FontWeight.w700,
             ),
-          )
+          ),
+          Common.gap(width: data.width * 0.01),
+          Text(
+            'Pricing',
+            style: AppTypography.baseStyle(
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          Common.gap(width: data.width * 0.01),
+          Text(
+            'Why Us',
+            style: AppTypography.baseStyle(
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          Common.gap(width: data.width * 0.01),
+          Text(
+            'Our Work',
+            style: AppTypography.baseStyle(
+              fontWeight: FontWeight.w700,
+            ),
+          ),
         ],
       ),
     );
