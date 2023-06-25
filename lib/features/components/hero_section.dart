@@ -15,7 +15,11 @@ class HeroSection extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: isSmallMedium ? data.width * 0.04 : data.width * 0.08,
+        horizontal: (data.width > 1100 && data.width < 1500)
+            ? data.width * 0.04
+            : isSmallMedium
+                ? data.width * 0.04
+                : data.width * 0.06,
       ),
       child: Column(
         children: [
@@ -28,13 +32,16 @@ class HeroSection extends StatelessWidget {
             ),
           ),
           Row(
-            mainAxisAlignment:
-                isSmallMedium || ResponsiveWidget.isMediumScreen(context)
+            mainAxisAlignment: (data.width > 1100 && data.width < 1500)
+                ? MainAxisAlignment.spaceBetween
+                : isSmallMedium || ResponsiveWidget.isMediumScreen(context)
                     ? MainAxisAlignment.center
-                    : MainAxisAlignment.spaceAround,
+                    : MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              isSmallMedium || ResponsiveWidget.isMediumScreen(context)
+              isSmallMedium ||
+                      ResponsiveWidget.isMediumScreen(context) ||
+                      (data.width > 1100 && data.width < 1500)
                   ? const SizedBox.shrink()
                   : Padding(
                       padding: const EdgeInsets.only(top: 130.0),
@@ -67,7 +74,8 @@ class HeroSection extends StatelessWidget {
                       : Image.asset(AppStrings.maleFemale),
 
               /// Side Text
-              ResponsiveWidget.isMediumScreen(context)
+              ResponsiveWidget.isMediumScreen(context) ||
+                      (data.width > 1200 && data.width < 1210)
                   ? const SizedBox.shrink()
                   : Padding(
                       padding: const EdgeInsets.only(top: 50.0),
@@ -79,15 +87,14 @@ class HeroSection extends StatelessWidget {
                           SizedBox(
                             width: ResponsiveWidget.isLargeScreen(context)
                                 ? data.width * 0.3
-                                : data.width * 0.7,
+                                : data.width * 0.6,
                             child: Text(
-                              ResponsiveWidget.isLargeScreen(context)
-                                  ? 'Achieve your fitness goals with our personalized workout\nplans, expert nutrition advice, and easy progress tracking. Join\nthousands of satisfied users who have transformed their lives!'
-                                  : AppStrings.achieveText,
+                              AppStrings.achieveText,
                               textAlign: isSmallMedium
                                   ? TextAlign.center
                                   : TextAlign.end,
                               softWrap: true,
+                              maxLines: 20,
                               style: AppTypography.baseStyle(),
                             ),
                           ),
