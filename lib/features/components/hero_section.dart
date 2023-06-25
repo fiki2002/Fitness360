@@ -131,7 +131,54 @@ class HeroSection extends StatelessWidget {
                       ),
                     ),
             ],
-          )
+          ),
+          ResponsiveWidget.isMediumScreen(context) ||
+                  (data.width > 1200 && data.width < 1210)
+              ? Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Common.gap(height: 50),
+                    Text(
+                      'Achieve your fitness goals with our personalized workout\nplans, expert nutrition advice, and easy progress tracking. Join\nthousands of satisfied users who have transformed their lives!',
+                      textAlign: TextAlign.center,
+                      softWrap: true,
+                      maxLines: 20,
+                      style: AppTypography.baseStyle(),
+                    ),
+                    Common.gap(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        _buildContainer(
+                          context,
+                          child: Text(
+                            AppStrings.startNow,
+                            style: AppTypography.baseStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: isSmallMedium ? 17 : 20,
+                              color: Palette.white,
+                            ),
+                          ),
+                        ),
+                        Common.gap(width: 12),
+                        _buildContainer(
+                          context,
+                          color: Palette.white,
+                          child: Text(
+                            AppStrings.downloadApp,
+                            style: AppTypography.baseStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: isSmallMedium ? 17 : 20,
+                              color: Palette.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Common.gap(height: 50),
+                  ],
+                )
+              : const SizedBox.shrink(),
         ],
       ),
     );
