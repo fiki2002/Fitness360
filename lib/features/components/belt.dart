@@ -28,7 +28,7 @@ class Belt extends StatelessWidget {
                 style: AppTypography.baseStyle(
                   color: Palette.white,
                   fontWeight: FontWeight.w700,
-                  fontSize: isSmallMedium ? 12 : 24,
+                  fontSize: isSmallMedium ? 16 : 24,
                 ),
               ),
               Common.gap(height: isSmallMedium ? 20 : 40),

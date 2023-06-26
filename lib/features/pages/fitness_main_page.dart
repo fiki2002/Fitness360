@@ -1,6 +1,8 @@
 import 'package:fitness360/features/components/belt.dart';
 import 'package:fitness360/features/components/header.dart';
 import 'package:fitness360/features/components/hero_section.dart';
+import 'package:fitness360/features/components/what_our_app_offers_section.dart';
+import 'package:fitness360/features/components/workout_plans_section.dart';
 import 'package:flutter/material.dart';
 
 class FitnessPage extends StatelessWidget {
@@ -15,8 +17,8 @@ class FitnessPage extends StatelessWidget {
             Header(),
             HeroSection(),
             Belt(),
-            // WorkOutPlansSections(),
-            // WhatOurAppOffers(),
+            WorkOutPlansSections(),
+            WhatOurAppOffers(),
             // SeeTheTransformations(),
             // GetStartedToday(),
             // Footer(),
