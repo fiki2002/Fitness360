@@ -1,4 +1,5 @@
 import 'package:fitness360/constants/app_palette.dart';
+import 'package:fitness360/constants/app_responsiveness.dart';
 import 'package:fitness360/constants/app_string.dart';
 import 'package:fitness360/constants/app_typography.dart';
 import 'package:fitness360/constants/common_widgets.dart';
@@ -11,6 +12,30 @@ class WhatOurAppOffers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final data = MediaQuery.of(context).size;
+    final isSmallMedium = ResponsiveWidget.isSmallScreen(context);
+
+    List<Widget> buildContainers = [
+      _buildContainer(
+        context,
+        icon: AppStrings.img1,
+        text1: AppStrings.expertText,
+        text2: AppStrings.text1,
+      ),
+      Common.gap(width: 20),
+      _buildContainer(
+        context,
+        icon: AppStrings.img2,
+        text1: AppStrings.easyProgressTracking,
+        text2: AppStrings.text2,
+      ),
+      Common.gap(width: 20),
+      _buildContainer(
+        context,
+        icon: AppStrings.img3,
+        text1: AppStrings.communityInspireU,
+        text2: AppStrings.text3,
+      ),
+    ];
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: data.width * 0.06,
@@ -26,28 +51,13 @@ class WhatOurAppOffers extends StatelessWidget {
             ),
           ),
           Common.gap(height: 40),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildContainer(
-                icon: AppStrings.img1,
-                text1: AppStrings.expertText,
-                text2: AppStrings.text1,
-              ),
-              Common.gap(width: 20),
-              _buildContainer(
-                icon: AppStrings.img2,
-                text1: AppStrings.easyProgressTracking,
-                text2: AppStrings.text2,
-              ),
-              Common.gap(width: 20),
-              _buildContainer(
-                icon: AppStrings.img3,
-                text1: AppStrings.communityInspireU,
-                text2: AppStrings.text3,
-              ),
-            ],
-          ),
+          data.width < 670
+              ? Column(
+                  children: buildContainers,
+                )
+              : Row(
+                  children: buildContainers,
+                ),
           Common.gap(height: 100),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -104,17 +114,21 @@ class WhatOurAppOffers extends StatelessWidget {
     );
   }
 
-  Widget _buildContainer({required String icon, text1, text2}) {
+  Widget _buildContainer(BuildContext context,
+      {required String icon, text1, text2}) {
+    final data = MediaQuery.of(context).size;
+
     return Expanded(
       child: Container(
-        height: 360,
-        padding: const EdgeInsets.only(top: 30, left: 20, bottom: 20),
+        height: data.width < 670?data.width * 0.6: data.height * 0.6,
+        padding: const EdgeInsets.only(left: 20, bottom: 20, top: 30),
         decoration: BoxDecoration(
           color: Palette.containerBgColor,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(icon),
             Common.gap(height: 40),
