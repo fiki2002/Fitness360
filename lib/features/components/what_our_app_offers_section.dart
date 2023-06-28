@@ -12,7 +12,7 @@ class WhatOurAppOffers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final data = MediaQuery.of(context).size;
-    final isSmallMedium = ResponsiveWidget.isSmallScreen(context);
+    final isSmallScreen = ResponsiveWidget.isSmallScreen(context);
 
     List<Widget> buildContainers = [
       _buildContainer(
@@ -20,20 +20,25 @@ class WhatOurAppOffers extends StatelessWidget {
         icon: AppStrings.img1,
         text1: AppStrings.expertText,
         text2: AppStrings.text1,
+        isSmallScreen: isSmallScreen,
       ),
       Common.gap(width: 20),
+      Common.gap(height: isSmallScreen ? 20 : 0),
       _buildContainer(
         context,
         icon: AppStrings.img2,
         text1: AppStrings.easyProgressTracking,
         text2: AppStrings.text2,
+        isSmallScreen: isSmallScreen,
       ),
       Common.gap(width: 20),
+      Common.gap(height: isSmallScreen ? 20 : 0),
       _buildContainer(
         context,
         icon: AppStrings.img3,
         text1: AppStrings.communityInspireU,
         text2: AppStrings.text3,
+        isSmallScreen: isSmallScreen,
       ),
     ];
     return Padding(
@@ -42,7 +47,7 @@ class WhatOurAppOffers extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Common.gap(height: 140),
+          Common.gap(height: isSmallScreen ? 70 : 140),
           Text(
             AppStrings.whatOurAppOffers,
             style: AppTypography.baseStyle(
@@ -50,8 +55,8 @@ class WhatOurAppOffers extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
           ),
-          Common.gap(height: 40),
-          data.width < 670
+          Common.gap(height: isSmallScreen ? 20 : 40),
+          isSmallScreen
               ? Column(
                   children: buildContainers,
                 )
@@ -108,49 +113,58 @@ class WhatOurAppOffers extends StatelessWidget {
               ),
             ],
           ),
-          Common.gap(height: 100),
+          Common.gap(height: isSmallScreen ? 50 : 100),
         ],
       ),
     );
   }
 
-  Widget _buildContainer(BuildContext context,
-      {required String icon, text1, text2}) {
+  Widget _buildContainer(
+    BuildContext context, {
+    required String icon,
+    text1,
+    text2,
+    bool isSmallScreen = false,
+  }) {
     final data = MediaQuery.of(context).size;
 
-    return Expanded(
-      child: Container(
-        height: data.width < 670?data.width * 0.6: data.height * 0.6,
-        padding: const EdgeInsets.only(left: 20, bottom: 20, top: 30),
-        decoration: BoxDecoration(
-          color: Palette.containerBgColor,
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SvgPicture.asset(icon),
-            Common.gap(height: 40),
-            Text(
-              text1,
-              style: AppTypography.baseStyle(
-                fontSize: 24,
-                color: Palette.white,
-                fontWeight: FontWeight.w700,
-              ),
+    var container = Container(
+      height: isSmallScreen ? data.height * 0.4 : data.height * 0.6,
+      width: isSmallScreen ? double.infinity : data.width * 0.6,
+      padding: const EdgeInsets.only(left: 20, bottom: 20, top: 30),
+      decoration: BoxDecoration(
+        color: Palette.containerBgColor,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SvgPicture.asset(icon),
+          Common.gap(height: 40),
+          Text(
+            text1,
+            style: AppTypography.baseStyle(
+              fontSize: 24,
+              color: Palette.white,
+              fontWeight: FontWeight.w700,
             ),
-            Common.gap(height: 40),
-            Text(
-              text2,
-              style: AppTypography.baseStyle(
-                color: Palette.white,
-              ),
+          ),
+          Common.gap(height: 40),
+          Text(
+            text2,
+            style: AppTypography.baseStyle(
+              color: Palette.white,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
+    if (isSmallScreen == true) {
+      return container;
+    } else {
+      return Expanded(child: container);
+    }
   }
 
   Widget _stackedContainer({

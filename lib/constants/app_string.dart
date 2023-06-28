@@ -72,9 +72,9 @@ class AppStrings {
   static const String easyProgressTracking = 'Easy Progress Tracking';
   static const String communityInspireU = 'A Community to inspire you';
   static const String text1 =
-      'Fuel your body with the right nutrients\nand take your fitness journey to the\nnext level.';
+      'Fuel your body with the right nutrients and take your fitness journey to the next level.';
   static const String text2 =
-      'Stay motivated and track your progress\neffortlessly with our intuitive app.\nMonitor your workout and make real strides\ntowards your fitness goals. ';
+      'Stay motivated and track your progress effortlessly with our intuitive app. Monitor your workout and make real strides towards your fitness goals. ';
   static const String text3 =
-      'We believe in the power of community\nto ignite your inner spark and propel\nyou towards your dreams.';
+      'We believe in the power of community to ignite your inner spark and propel you towards your dreams.';
 }
