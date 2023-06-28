@@ -43,7 +43,7 @@ class AppStrings {
   static const String achieveText =
       'Achieve your fitness goals with our personalized workout plans, expert nutrition advice, and easy progress tracking. Join thousands of satisfied users who have transformed their lives!';
   static const String incredibleSaying =
-      'Don\'t Just Take Our Word For It - Hear What Our Users Have\nTo Say About Their Incredible Transformations:';
+      'Don\'t Just Take Our Word For It - Hear What Our Users Have To Say About Their Incredible Transformations:';
   static const String seeTheTransformations = 'See the Transformations';
   static const String checkOutText =
       'Check out these inspiring before-and-after photos of our users who have completely\ntransformed their bodies and lives. Witness the power of commitment, dedication, and our\nfitness app\'s incredible features.';
@@ -64,7 +64,7 @@ class AppStrings {
   static const String fitness360 = '2023 Copyright by Fitness360';
   static const String termsAndPolicy = 'Terms, Privacy policy';
   static const String userFeedback1 =
-      'I\'ve Tried Countless Fitness Apps, But This One Truly Stands Out.\nThe Personalized Workout Plans Have Pushed Me To New Limits,\nAnd The Nutrition Advice Has Helped Me Make Sustainable\nChanges. I\'ve Lost 20 Pounds And Gained So Much Strength';
+      'I\'ve Tried Countless Fitness Apps, But This One Truly Stands Out. The Personalized Workout Plans Have Pushed Me To New Limits, And The Nutrition Advice Has Helped Me Make Sustainable Changes. I\'ve Lost 20 Pounds And Gained So Much Strength';
   static const String userName1 = 'Arlene McCoy';
   static const String userName2 = 'Albert Flores';
   static const String userName3 = 'Annette Black';

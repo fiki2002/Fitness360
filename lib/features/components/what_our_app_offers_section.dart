@@ -41,6 +41,66 @@ class WhatOurAppOffers extends StatelessWidget {
         isSmallScreen: isSmallScreen,
       ),
     ];
+    List<Widget> usersFeedback = [
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            AppStrings.whatUsersAreSaying,
+            textAlign: TextAlign.start,
+            style: AppTypography.baseStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 40,
+            ),
+          ),
+          Common.gap(height: 20),
+          Text(
+            !(data.width < 1245)
+                ? 'Don\'t Just Take Our Word For It - Hear What Our\nUsers Have To Say About Their Incredible\nTransformations:'
+                : AppStrings.incredibleSaying,
+            textAlign: TextAlign.start,
+            style: AppTypography.baseStyle(),
+          ),
+        ],
+      ),
+      Common.gap(height: 20),
+      Column(
+        children: [
+          _stackedContainer(
+            positionedValue: (data.width > 880 && data.width < 1245)
+                ? 40
+                : (data.width < 880)
+                    ? -40
+                    : 115,
+            text: AppStrings.userName1,
+            image: AppStrings.person1,
+            context: context,
+            isSmallScreen: (data.width < 1245),
+          ),
+          Common.gap(height: 24),
+          _stackedContainer(
+            positionedValue: -40,
+            text: AppStrings.userName2,
+            image: AppStrings.person2,
+            isOdd: false,
+            isSmallScreen: (data.width < 1245),
+            context: context,
+          ),
+          Common.gap(height: 24),
+          _stackedContainer(
+            text: AppStrings.userName3,
+            positionedValue: (data.width > 880 && data.width < 1245)
+                ? 40
+                : (data.width < 880)
+                    ? -40
+                    : 115,
+            image: AppStrings.person3,
+            isSmallScreen: (data.width < 1245),
+            context: context,
+          ),
+        ],
+      ),
+    ];
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: data.width * 0.06,
@@ -63,56 +123,16 @@ class WhatOurAppOffers extends StatelessWidget {
               : Row(
                   children: buildContainers,
                 ),
-          Common.gap(height: 100),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    AppStrings.whatUsersAreSaying,
-                    textAlign: TextAlign.start,
-                    style: AppTypography.baseStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 40,
-                    ),
-                  ),
-                  Common.gap(height: 20),
-                  Text(
-                    AppStrings.incredibleSaying,
-                    textAlign: TextAlign.start,
-                    style: AppTypography.baseStyle(),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  _stackedContainer(
-                    positionedValue: 115,
-                    text: AppStrings.userName1,
-                    image: AppStrings.person1,
-                    context: context,
-                  ),
-                  Common.gap(height: 24),
-                  _stackedContainer(
-                    positionedValue: -40,
-                    text: AppStrings.userName2,
-                    image: AppStrings.person2,
-                    isOdd: false,
-                    context: context,
-                  ),
-                  Common.gap(height: 24),
-                  _stackedContainer(
-                    text: AppStrings.userName3,
-                    positionedValue: 115,
-                    image: AppStrings.person3,
-                    context: context,
-                  ),
-                ],
-              ),
-            ],
-          ),
+          Common.gap(height: isSmallScreen ? 50 : 100),
+          (data.width < 1245)
+              ? Column(
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: usersFeedback,
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: usersFeedback,
+                ),
           Common.gap(height: isSmallScreen ? 50 : 100),
         ],
       ),
@@ -173,6 +193,7 @@ class WhatOurAppOffers extends StatelessWidget {
     required String image,
     bool isOdd = true,
     required double positionedValue,
+    bool isSmallScreen = false,
   }) {
     final data = MediaQuery.of(context).size;
 
@@ -180,16 +201,26 @@ class WhatOurAppOffers extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          height: 160,
-          margin: EdgeInsets.only(left: isOdd ? 150 : 0),
-          padding: const EdgeInsets.only(top: 20, left: 60),
-          width: data.width * 0.4,
+          height: (data.width < 1245) ? 200 : 160,
+          margin: EdgeInsets.only(
+            left: (data.width > 880 && data.width < 1245 && isOdd)
+                ? 80
+                : (isOdd && !isSmallScreen)
+                    ? 150
+                    : (isOdd & !isSmallScreen)
+                        ? 100
+                        : 0,
+          ),
+          padding:
+              EdgeInsets.only(top: 20, left: (data.width < 1245) ? 50 : 60),
+          width: isSmallScreen ? data.width * 0.8 : data.width * 0.4,
           decoration: BoxDecoration(
             color: Palette.containerBgColor,
             borderRadius: BorderRadius.circular(12),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 AppStrings.userFeedback1,
