@@ -78,7 +78,7 @@ class HeroSection extends StatelessWidget {
                       (data.width > 1200 && data.width < 1210)
                   ? const SizedBox.shrink()
                   : Padding(
-                      padding: const EdgeInsets.only(top: 50.0),
+                      padding: EdgeInsets.only(top: isSmallMedium ? 20 : 50.0),
                       child: Column(
                         crossAxisAlignment: isSmallMedium
                             ? CrossAxisAlignment.center
@@ -94,8 +94,10 @@ class HeroSection extends StatelessWidget {
                                   ? TextAlign.center
                                   : TextAlign.end,
                               softWrap: true,
-                              maxLines: 20,
-                              style: AppTypography.baseStyle(),
+                              maxLines: 5,
+                              style: AppTypography.baseStyle(
+                                fontSize: isSmallMedium ? 14 : 20,
+                              ),
                             ),
                           ),
                           Common.gap(height: 30),
