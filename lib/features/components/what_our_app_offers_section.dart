@@ -50,7 +50,7 @@ class WhatOurAppOffers extends StatelessWidget {
             textAlign: TextAlign.start,
             style: AppTypography.baseStyle(
               fontWeight: FontWeight.w700,
-              fontSize: 40,
+              fontSize: isSmallScreen ? 20 : 40,
             ),
           ),
           Common.gap(height: 20),
@@ -59,7 +59,9 @@ class WhatOurAppOffers extends StatelessWidget {
                 ? 'Don\'t Just Take Our Word For It - Hear What Our\nUsers Have To Say About Their Incredible\nTransformations:'
                 : AppStrings.incredibleSaying,
             textAlign: TextAlign.start,
-            style: AppTypography.baseStyle(),
+            style: AppTypography.baseStyle(
+              fontSize: isSmallScreen ? 14 : 20,
+            ),
           ),
         ],
       ),
@@ -111,7 +113,7 @@ class WhatOurAppOffers extends StatelessWidget {
           Text(
             AppStrings.whatOurAppOffers,
             style: AppTypography.baseStyle(
-              fontSize: 40,
+              fontSize: isSmallScreen ? 20 : 40,
               fontWeight: FontWeight.w700,
             ),
           ),

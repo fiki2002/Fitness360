@@ -46,7 +46,7 @@ class AppStrings {
       'Don\'t Just Take Our Word For It - Hear What Our Users Have To Say About Their Incredible Transformations:';
   static const String seeTheTransformations = 'See the Transformations';
   static const String checkOutText =
-      'Check out these inspiring before-and-after photos of our users who have completely\ntransformed their bodies and lives. Witness the power of commitment, dedication, and our\nfitness app\'s incredible features.';
+      'Check out these inspiring before-and-after photos of our users who have completely transformed their bodies and lives. Witness the power of commitment, dedication, and our fitness app\'s incredible features.';
   static const String getStartedToday = 'Get Started Today!';
   static const String getStartedSubText =
       'Ready to embark on your fitness journey and experience the life-changing\nbenefits of our app? Join thousands of users who have achieved amazing\nresults. Download our app now and unlock your full potential. Get fit, get\nhealthy, and get ready to live your best life!';
