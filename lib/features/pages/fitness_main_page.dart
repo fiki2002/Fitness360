@@ -1,4 +1,5 @@
 import 'package:fitness360/features/components/belt.dart';
+import 'package:fitness360/features/components/get_started_today.dart';
 import 'package:fitness360/features/components/header.dart';
 import 'package:fitness360/features/components/hero_section.dart';
 import 'package:fitness360/features/components/see_the_transformations.dart';
@@ -21,7 +22,7 @@ class FitnessPage extends StatelessWidget {
             WorkOutPlansSections(),
             WhatOurAppOffers(),
             SeeTheTransformations(),
-            // GetStartedToday(),
+            GetStartedToday(),
             // Footer(),
           ],
         ),

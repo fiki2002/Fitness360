@@ -1,4 +1,5 @@
 import 'package:fitness360/constants/app_palette.dart';
+import 'package:fitness360/constants/app_responsiveness.dart';
 import 'package:fitness360/constants/app_string.dart';
 import 'package:fitness360/constants/app_typography.dart';
 import 'package:fitness360/constants/common_widgets.dart';
@@ -11,13 +12,13 @@ class GetStartedToday extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final data = MediaQuery.of(context).size;
-
+    final isSmallScreen = ResponsiveWidget.isSmallScreen(context);
     return Column(
       children: [
         Container(
           width: data.width,
-          height: data.width * 0.25,
           color: Palette.black,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -26,7 +27,7 @@ class GetStartedToday extends StatelessWidget {
                 style: AppTypography.baseStyle(
                   fontWeight: FontWeight.w700,
                   color: Palette.white,
-                  fontSize: 40,
+                  fontSize: isSmallScreen ? 24 : 40,
                 ),
               ),
               Common.gap(height: 20),
@@ -35,29 +36,66 @@ class GetStartedToday extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: AppTypography.baseStyle(
                   color: Palette.white,
+                  fontSize: isSmallScreen ? 14 : 20,
                 ),
               ),
               Common.gap(height: 40),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    AppStrings.availableIn,
-                    style: AppTypography.baseStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 24,
-                      color: Palette.white,
+              isSmallScreen
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          AppStrings.availableIn,
+                          style: AppTypography.baseStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 24,
+                            color: Palette.white,
+                          ),
+                        ),
+                        Common.gap(width: 40),
+                        Common.gap(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            _buildContainer(
+                              icon: AppStrings.appleIcon,
+                              text: AppStrings.apple,
+                              isSmallScreen: isSmallScreen,
+                            ),
+                            Common.gap(width: 20),
+                            _buildContainer(
+                                icon: AppStrings.playStoreIcon,
+                                text: AppStrings.playStore,
+                                isSmallScreen: isSmallScreen),
+                          ],
+                        )
+                      ],
+                    )
+                  : Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          AppStrings.availableIn,
+                          style: AppTypography.baseStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: isSmallScreen ? 14 : 24,
+                            color: Palette.white,
+                          ),
+                        ),
+                        Common.gap(width: 40),
+                        _buildContainer(
+                          icon: AppStrings.appleIcon,
+                          text: AppStrings.apple,
+                          isSmallScreen: isSmallScreen,
+                        ),
+                        Common.gap(width: 20),
+                        _buildContainer(
+                          icon: AppStrings.playStoreIcon,
+                          text: AppStrings.playStore,
+                          isSmallScreen: isSmallScreen,
+                        ),
+                      ],
                     ),
-                  ),
-                  Common.gap(width: 40),
-                  _buildContainer(
-                      icon: AppStrings.appleIcon, text: AppStrings.apple),
-                  Common.gap(width: 20),
-                  _buildContainer(
-                      icon: AppStrings.playStoreIcon,
-                      text: AppStrings.playStore),
-                ],
-              ),
             ],
           ),
         ),
@@ -66,9 +104,12 @@ class GetStartedToday extends StatelessWidget {
     );
   }
 
-  Widget _buildContainer({required String icon, required String text}) {
+  Widget _buildContainer(
+      {required String icon,
+      required String text,
+      required bool isSmallScreen}) {
     return Container(
-      height: 52,
+      height: isSmallScreen ? 40 : 52,
       width: 200,
       decoration: BoxDecoration(
         color: Palette.containerBgColor,
@@ -84,6 +125,7 @@ class GetStartedToday extends StatelessWidget {
             style: AppTypography.baseStyle(
               color: Palette.white,
               fontWeight: FontWeight.w600,
+              fontSize: isSmallScreen ? 14 : 20,
             ),
           ),
         ],

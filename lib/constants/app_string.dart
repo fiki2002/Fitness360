@@ -49,7 +49,7 @@ class AppStrings {
       'Check out these inspiring before-and-after photos of our users who have completely transformed their bodies and lives. Witness the power of commitment, dedication, and our fitness app\'s incredible features.';
   static const String getStartedToday = 'Get Started Today!';
   static const String getStartedSubText =
-      'Ready to embark on your fitness journey and experience the life-changing\nbenefits of our app? Join thousands of users who have achieved amazing\nresults. Download our app now and unlock your full potential. Get fit, get\nhealthy, and get ready to live your best life!';
+      'Ready to embark on your fitness journey and experience the life-changing benefits of our app? Join thousands of users who have achieved amazing results. Download our app now and unlock your full potential. Get fit, get healthy, and get ready to live your best life!';
   static const String availableIn = 'Available In';
   static const String apple = 'APPLE STORE';
   static const String playStore = 'PLAY STORE';
