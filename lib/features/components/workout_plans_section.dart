@@ -1,5 +1,6 @@
 import 'package:fitness360/constants/app_palette.dart';
 import 'package:fitness360/constants/app_responsiveness.dart';
+import 'package:fitness360/constants/app_string.dart';
 import 'package:fitness360/constants/app_typography.dart';
 import 'package:fitness360/constants/common_widgets.dart';
 import 'package:flutter/material.dart';
@@ -35,12 +36,19 @@ class WorkOutPlansSections extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          height: isSmallMedium ? 200 : 400,
-          decoration: const BoxDecoration(
-            color: Colors.amberAccent,
-          ),
-        ),
+        isSmallMedium
+            ? const SizedBox.shrink()
+            : SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Image.asset(AppStrings.i1),
+                    Image.asset(AppStrings.i2),
+                    Image.asset(AppStrings.i3),
+                  ],
+                ),
+              ),
+        Common.gap(height: 20),
         Container(
           width: 200,
           height: 52,

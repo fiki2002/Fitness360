@@ -25,6 +25,9 @@ class AppStrings {
   static const String img1 = 'assets/icons/img1.svg';
   static const String img2 = 'assets/icons/img2.svg';
   static const String img3 = 'assets/icons/img3.svg';
+  static const String i1 = 'assets/images/i1.png';
+  static const String i2 = 'assets/images/i2.png';
+  static const String i3 = 'assets/images/i3.png';
   static const String menu = 'assets/icons/menu.svg';
 
   ///Texts
