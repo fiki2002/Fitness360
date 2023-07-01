@@ -1,14 +1,13 @@
+<img width="1792" alt="Screenshot 2023-07-01 at 03 35 55" src="https://github.com/fiki2002/Fitness360/assets/85044009/dced0ecf-9cb2-408e-a84d-34e13f176e4c">
+![Uploading Screenshot 2023-07-01 at 03.35.39.png…]()
+![Uploading Screenshot 2023-07-01 at 03.35.28.png…]()
 
 
-## Getting Started
+## A Fully Responsive Web Page For A Fitness App
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Uploading Screen Recording 2023-07-01 at 03.36.06.mov…
+
+![Uploading Screenshot 2023-07-01 at 03.35.13.png…]()
