@@ -109,7 +109,7 @@ class WhatOurAppOffers extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Common.gap(height: isSmallScreen ? 70 : 140),
+          Common.gap(height: isSmallScreen ? 50 : 100),
           Text(
             AppStrings.whatOurAppOffers,
             style: AppTypography.baseStyle(
